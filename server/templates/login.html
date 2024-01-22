@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+  <title>ConnectPro - Login</title>
+</head>
+<body>
+  
+  <div class="container">
+   
+    <header class="header">
+      <button onclick="voltar()">
+        <i class="fas fa-arrow-left"></i> <!-- Ícone de seta para a esquerda -->
+      </button>
+  <h1>ConnectPro</h1>
+</header>
+    <main>
+      <h2>Login</h2>
+      <form onsubmit="return fazerLogin()">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" required>
+    
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" required>
+    
+        <button type="submit" class="btn-login">Login</button>
+      </form>
+      <p>Não tem uma conta? <a href="/register">Crie uma conta aqui</a></p>
+    </main>
+  </div>
+  <script>
+    // Use a configuração do firebaseConfig
+const firebaseConfig = {
+  apiKey: "AIzaSyBE7gVDMkvuxlL3U66xLlaOhDbycB1MZ4o",
+  authDomain: "imed-8f451.firebaseapp.com",
+  databaseURL: "https://imed-8f451-default-rtdb.firebaseio.com",
+  projectId: "imed-8f451",
+  storageBucket: "imed-8f451.appspot.com",
+  messagingSenderId: "865781797198",
+  appId: "1:865781797198:web:751a0974d141be7a5a4e1f",
+  measurementId: "G-ZQ1Z13BWHP"
+};
+
+firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    function fazerLogin() {
+      const email = document.getElementsByName('email')[0].value;
+      const senha = document.getElementsByName('senha')[0].value;
+
+      auth.signInWithEmailAndPassword(email, senha)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log('Login bem-sucedido!');
+            window.location.href = '/inicio';
+        })
+        .catch((error) => {
+          console.error('Erro ao fazer login:', error.message);
+          // Exibir mensagem de erro na interface
+          document.getElementById('mensagemErro').textContent = 'Erro ao fazer login. Verifique suas credenciais.';
+        });
+        
+
+      return false; // Impede o envio do formulário
+    }
+    function voltar() {
+      // Utiliza a função 'history' para voltar para a página anterior
+      window.history.back();
+    }
+  </script>
+</body>
+</html>
