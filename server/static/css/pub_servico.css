@@ -1,0 +1,183 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 2em;
+  position: relative;
+}
+
+header button {
+  position: absolute left;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+  position: relative;
+  padding-left: 40px; /* Adicionado espaçamento à esquerda para acomodar o ícone de voltar */
+}
+
+h1 span {
+  position: absolute;
+  left: 0;
+}
+
+main {
+  padding: 1em;
+}
+
+form {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Adicione o estilo para o input tipo file */
+input[type="file"] {
+  margin-bottom: 20px; /* Aumenta o espaço abaixo do input tipo file */
+}
+
+/* Estilo para o div de visualização da imagem */
+#preview-imagem {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+footer a i {
+  font-size: 24px;
+  margin-top: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  header button {
+    left: 10px;
+  }
+
+  form {
+    padding: 1em;
+  }
+}
+
+/* Adicione o estilo para o botão de escolher a foto */
+#escolher-foto {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Adicione o estilo para o botão de escolher a foto */
+#escolher-foto {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#escolher-foto:hover {
+  background-color: #0056b3;
+}
+
+#input-foto {
+  display: none; /* Esconde o input de arquivo padrão */
+}
+
+
+#preview-imagem {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: none;
+  margin: 0 auto;
+  border-radius: 8px; /* Adiciona borda arredondada */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+
+/* Estilo adicional para o input tipo file (opcional) */
+#input-foto-label {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#input-foto-label:hover {
+  text-decoration: underline;
+}
+

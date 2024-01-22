@@ -58,6 +58,12 @@ def feed():
    return render_template('inicio.html')
 
 
+@app.route('/post')
+def post():
+   return render_template('pub_servico.html')
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
