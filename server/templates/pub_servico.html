@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/css/pub_servico.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <title>ConnectPro - Publicar Serviço</title>
 </head>
 <body>
@@ -19,9 +22,13 @@
   <main>
     <form id="pub-servico-form">
 
-      <label for="input-foto" id="input-foto-label">Escolher Foto</label>
-      <input type="file" id="input-foto" accept="image/*" onchange="previewFoto(this)">
-      <img id="preview-imagem" src="#" alt="Preview da Imagem">
+      <!-- Adicione o input de arquivo e o elemento de visualização da imagem -->
+    <label for="input-foto" id="input-foto-label">Escolher Foto</label>
+    <input type="file" id="input-foto" accept="image/*" onchange="previewFoto(this)">
+    <img id="preview-imagem" src="#" alt="Preview da Imagem">
+
+      
+
 
       <label for="nome-servico">Nome do Serviço</label>
       <input type="text" id="nome-servico" name="nome-servico" required>
@@ -52,12 +59,15 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="/static/js/pub_servico.js"></script>
   <script>
     function voltar() {
       // Utiliza a função 'history' para voltar para a página anterior
       window.history.back();
     }
+
+  document.getElementById('input-foto').addEventListener('change', mostrarPreviews);
   </script>
 
 </body>

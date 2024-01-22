@@ -156,6 +156,13 @@ footer a i {
 }
 
 
+
+
+/* Estilo para o div de visualização da imagem */
+.slick-carousel {
+  width: 100%;
+}
+
 #preview-imagem {
   width: 100%;
   max-width: 300px;
@@ -167,14 +174,17 @@ footer a i {
 }
 
 
+
 /* Estilo adicional para o input tipo file (opcional) */
 #input-foto-label {
-  margin-top: 10px;
   display: block;
-  text-align: center;
-  color: #007bff;
-  font-size: 16px;
+  margin-bottom: 10px;
+  color: #007bff; /* ou a cor desejada */
   cursor: pointer;
+}
+
+#foto-servico {
+  display: none; /* Para ocultar a entrada de arquivo, pois usamos o rótulo personalizado */
 }
 
 #input-foto-label:hover {
