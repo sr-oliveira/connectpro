@@ -31,9 +31,6 @@
     <input type="file" id="input-foto" accept="image/*" onchange="previewFoto(this)">
     <img id="preview-imagem" src="#" alt="Preview da Imagem">
 
-      
-
-
       <label for="nome-servico">Nome do Serviço</label>
       <input type="text" id="nome-servico" name="nome-servico" required>
 
@@ -48,8 +45,11 @@
 
       <label for="descricao-servico">Descrição do Serviço</label>
       <textarea id="descricao-servico" name="descricao-servico" rows="4" required></textarea>
-      <button type="button" onclick="publicarServico()">Publicar</button>
+      
+      <button type="button" id="btn-publicar" onclick="publicarServico()">Publicar</button>
+
     </form>
+    
   </main>
 
   <footer>
